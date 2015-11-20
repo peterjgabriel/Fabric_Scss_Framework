@@ -1,0 +1,77 @@
+
+// Header
+header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  overflow: hidden;
+}
+
+.logo-wrapper {
+  position: relative;
+  top: 10px;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+// Main Navigation
+#main-nav {
+  height: 40px; /* set to the height you want your menu to be */
+  margin: 0 0 10px;
+  float: right;
+  margin-top: 10px;
+}
+
+#main-nav ul {
+  margin: 0; padding: 0;
+}
+
+#main-nav li {
+  display: block;
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  margin-left: 30px;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#main-nav li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+#main-nav ul ul { /* this targets all sub menus */
+  display: none; /* hide all sub menus from view */
+  position: absolute;
+  top: 40px; /* this should be the same height as the top level menu -- height + padding + borders */
+}
+
+#main-nav ul ul li { /* this targets all submenu items */
+  float: none; /* overwriting our float up above */
+  width: 251px; /* set to the width you want your sub menus to be. This needs to match the value we set below */
+  text-align: left;
+  list-style-type: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: #333333;
+  color: #ffffff;
+  padding-bottom: 5px;
+}
+
+#main-nav ul ul li a { /* target all sub menu item links */
+  padding: 0 15px; /* 5px 10px */
+}
+
+#main-nav ul li:hover > ul {
+  display: block; /* show sub menus when hovering over a parent */
+  z-index: 9999;
+  background-color: red;
+}
